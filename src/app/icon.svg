@@ -1,0 +1,52 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+>
+  <!-- Envelope -->
+  <rect
+    x="10"
+    y="16"
+    width="44"
+    height="32"
+    rx="4"
+    stroke="#222222"
+    stroke-width="3"
+    fill="white"
+  />
+
+  <path
+    d="M11 18L32 35L53 18"
+    stroke="#222222"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M11 46L26 32"
+    stroke="#222222"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M53 46L38 32"
+    stroke="#222222"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <!-- Heart Seal -->
+  <path
+    d="M32 28
+       C32 25.8 30.4 24 28.4 24
+       C26.7 24 25.3 25.1 24.8 26.6
+       C24.3 25.1 22.9 24 21.2 24
+       C19.2 24 17.6 25.8 17.6 28
+       C17.6 31.4 21.2 34 24.8 37
+       C28.4 34 32 31.4 32 28Z"
+    transform="translate(7 3)"
+    fill="#FB7185"
+  />
+</svg>

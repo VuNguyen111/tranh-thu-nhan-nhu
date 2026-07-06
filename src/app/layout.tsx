@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin", "vietnamese"],
-});
+import { inter, logo } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Tranh thủ Nhắn nhủ",
   description: "Nơi những lời chưa kịp nói được cất lên.",
+
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html
+      lang="vi"
+      className={`${inter.variable} ${logo.variable}`}
+    >
       <body className={inter.className}>
         {children}
       </body>

@@ -1,10 +1,26 @@
 export const LETTER_COLORS = [
-  { id: "red", value: "#EF4444" },
-  { id: "orange", value: "#F97316" },
-  { id: "yellow", value: "#FACC15" },
-  { id: "green", value: "#22C55E" },
-  { id: "blue", value: "#3B82F6" },
-  { id: "purple", value: "#8B5CF6" },
-  { id: "black", value: "#18181B" },
-  { id: "white", value: "#FFFFFF" },
+  {
+    id: "pink",
+    value: "#F8C8DC",
+  },
+  {
+    id: "peach",
+    value: "#FFD6BA",
+  },
+  {
+    id: "yellow",
+    value: "#FFF3B0",
+  },
+  {
+    id: "green",
+    value: "#D8F3DC",
+  },
+  {
+    id: "blue",
+    value: "#CDE7FF",
+  },
+  {
+    id: "purple",
+    value: "#E4D7FF",
+  },
 ];

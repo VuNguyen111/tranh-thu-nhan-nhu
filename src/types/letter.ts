@@ -1,10 +1,8 @@
 export interface Letter {
-  id: number;
+  id: string;
   recipient: string;
   message: string;
   color: string;
-
-  status: "pending" | "approved" | "rejected";
-
-  createdAt: string;
+  status: string;
+  created_at: string;
 }

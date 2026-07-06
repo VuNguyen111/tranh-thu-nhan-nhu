@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { LETTER_COLORS } from "@/constants/colors";
 import { createLetter } from "@/services/letterService";
+// import { FormEvent } from "react";
+import SuccessModal from "./SuccessModal";
 
 export default function SubmitForm() {
   const [recipient, setRecipient] = useState("");
@@ -12,9 +14,10 @@ export default function SubmitForm() {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    // e.preventDefault();
 
     // Validate
     if (!recipient.trim()) {
@@ -62,12 +65,12 @@ export default function SubmitForm() {
       console.log("Inserted:", data);
 
       // Reset form
-      setRecipient("");
-      setMessage("");
+      // setRecipient("");
+      // setMessage("");
       setColor("");
       setAgree(false);
 
-      alert("❤️ Lá thư của bạn đã được gửi và đang chờ kiểm duyệt.");
+      setSuccess(true);
     } catch (err) {
       console.error(err);
 
@@ -78,7 +81,10 @@ export default function SubmitForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-8 space-y-8">
+    <form   onSubmit={(e) => {
+        e.preventDefault();
+        void handleSubmit();
+      }} className="mt-8 space-y-8">
 
       {/* Người nhận */}
       <div>
@@ -197,6 +203,19 @@ export default function SubmitForm() {
       >
         {loading ? "Đang gửi..." : "Gửi thư"}
       </button>
+
+      {/* Modal */}
+      <SuccessModal
+        open={success}
+        onWriteAgain={() => {
+          setRecipient("");
+          setMessage("");
+          setColor("");
+          setAgree(false);
+
+          setSuccess(false);
+        }}
+      />
 
     </form>
   );
