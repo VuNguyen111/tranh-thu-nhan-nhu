@@ -14,11 +14,19 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-6 leading-8 text-zinc-700">
-            Có những lời chúng ta luôn muốn nói,
-            nhưng rồi vì ngại ngùng, khoảng cách,
-            hay chỉ đơn giản là thời điểm chưa phù hợp,
-            chúng vẫn ở lại trong lòng.
-          </p>
+            Lấy cảm hứng từ{" "}
+            <a
+                href="https://theunsentproject.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline font-medium"
+            >
+                The Unsent Project
+            </a>
+            , Chúng mình hiểu rằng có những lời chúng ta luôn muốn nói, nhưng rồi vì
+            ngại ngùng, khoảng cách, hay chỉ đơn giản là thời điểm chưa phù hợp, chúng
+            vẫn ở lại trong lòng.
+            </p>
 
           <hr className="my-10 border-zinc-200" />
 
